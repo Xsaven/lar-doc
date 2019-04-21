@@ -17,7 +17,7 @@
 			 * [Navigator](/LJScript/JavaScript_Framework/Classes/Navigator.md)
 			 * [ProServer](/LJScript/JavaScript_Framework/Classes/ProServer.md)
 		 * Macroses
-			 * [Declarator](/LJScript/JavaScript_Framework/Classes/Declarator.md)
+			 * [Declarator](/LJScript/JavaScript_Framework/Macroses/Declarator.md)
 	 * Lar packeage
 	 * [About LJScript](/LJScript/About_LJScript.md)
  * MaterialDesign
