@@ -1,9 +1,9 @@
 # Road interface
 
-Класс `Lar\Roads\Road` эта так называемая коллекция глобальных маршрутов.
+The class `Lar\Roads\Road` is the so-called collection of global routes.
 
 ## add
-Добавить объект в коллекцию.
+Add an object to the collection.
 ```php
 /**  
  * @param string $road  
@@ -11,7 +11,7 @@
  */
  add(string $road);
 ```
-Возвращает `true` если в коллекции уже был подобный объект, `false` если нет.
+Returns `true` if there was already a similar object in the collection,` false` if not.
 ### Example
 ```php
 use Lar\Roads\Road;
