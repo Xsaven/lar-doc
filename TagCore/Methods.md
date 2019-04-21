@@ -1,7 +1,104 @@
 # Tag Core Methods
 
+## resetCollect
+`public static`: Reset collection.
+```php
+$tag->resetCollect();
+```
+
+## selector
+`public static`: Almost `CSS` selector, works for the helper `_s`
+```php
+/**
+ * @param string $selector
+ * @return Collection|Tag|FindCollection
+ * @throws \Exception
+ */
+$tag->selector(string $selector);
+```
+
+## addName
+`public static`: Add a tag to the collection with your name.
+```php
+/**
+ * @param string $name
+ * @param Tag $tag
+ */
+$tag->addName(string $name, \Lar\Tagable\Tag $tag);
+```
+
+## cover
+`public static`: Static alias from method when.
+```php
+/**
+ * @return Tag
+ */
+$tag->cover();
+```
+
+## registerComponent
+`public static`: Registration component.
+```php
+/**
+ * @param string $name
+ * @param \Closure|string $component
+ * @throws \Exception
+ */
+$tag->registerComponent(string $name, $component);
+```
+
+## hasComponent
+`public static`: Check if item exists or not.
+```php
+/**
+ * @param string $name
+ * @return bool
+ */
+$tag->hasComponent(string $name);
+```
+
+## injectFile
+`public static`: Inject collection from file.
+```php
+/**
+ * @param $file
+ * @throws \Exception
+ */
+$tag->injectFile($file);
+```
+
+## injectCollection
+`public static`: Inject collection in to component collection.
+```php
+/**
+ * @param array $collection
+ */
+$tag->injectCollection($collection = []);
+```
+
+## getComponent
+`public static`: Component getter.
+```php
+/**
+ * @param string $name
+ * @return mixed
+ * @throws \Exception
+ */
+$tag->getComponent(string $name);
+```
+
+## create
+`public static`: Static element create.
+```php
+/**
+ * @throws \Exception
+ * @return Tag
+ */
+$tag->create();
+```
+
 ## hide
-Add to tag `style="display: none;"`.
+`public`: Add to tag `style="display: none;"`.
 ```php
 /**  
  * @param bool $eq You can pass a boolean value as a switch when rendering.
@@ -11,7 +108,7 @@ $tag->hide($eq = true);
 ```
 
 ## haveAndGetSelector
-Get the identifier attribute if there is, if not, create a unique attribute and return the `JS Query` selector.
+`public`: Get the identifier attribute if there is, if not, create a unique attribute and return the `JS Query` selector.
 ```php
 /**  
  * @return string  
@@ -20,11 +117,8 @@ Get the identifier attribute if there is, if not, create a unique attribute and 
 $tag->haveAndGetSelector();
 ```
 
-## getSelector
-Alias `haveAndGetSelectorID`
-
 ## haveAndGetSelectorID
-Get the value of the identifier attribute if there is one, if not create a unique one and return the `JS Query` selector.
+`public`: Get the value of the identifier attribute if there is one, if not create a unique one and return the `JS Query` selector.
 ```php
 /**  
  * @return string  
@@ -33,9 +127,28 @@ Get the value of the identifier attribute if there is one, if not create a uniqu
 $tag->haveAndGetSelectorID();
 ```
 
+## getSelector
+`public`: Selector getter. Alias `haveAndGetSelectorID`
+```php
+/**
+ * @return string
+ * @throws \Exception
+ */
+$tag->getSelector();
+```
+
+## setUID
+`public`: Set unique default tag attribute ID.
+```php
+/**
+ * @return $this
+ * @throws \Exception
+ */
+$tag->setUID();
+```
 
 ## hasParent
-Check if there is a parent object.
+`public`: Check if there is a parent object.
 ```php
 /**  
  * @return bool  
@@ -44,7 +157,7 @@ Check if there is a parent object.
 ```
 
 ## name
-Set the internal name for easy access through the `_s` helper.
+`public`: Set the internal name for easy access through the `_s` helper.
 ```php
 /**  
  * @param string $name  
@@ -56,51 +169,592 @@ _s($name)->text("Hello");
 ```
 
 ## getObjName
-Name getter
+`public`: Component name getter.
 ```php
-/**  
- * @return string  
+/**
+ * @return string
  */
- $tag->getObjName();
+$tag->getObjName();
+```
+
+## initTag
+`public`: Tag initialize.
+```php
+/**
+ * @param $element
+ * @return Tag
+ * @throws \Exception
+ */
+$tag->initTag($element);
 ```
 
 ## getElement
-Element getter
+`public`: Element getter.
 ```php
-/**  
- * @return string  
+/**
+ * @return string
  */
- $tag->getElement();
+$tag->getElement();
 ```
 
 ## isElement
-Checks if an item has an element.
+`public`: Checks if an item has an element.
 ```php
-/**  
- * @return bool  
+/**
+ * @return bool
  */
- $tag->isElement();
+$tag->isElement();
 ```
 
 ## getParent
-Get element parent.
+`public`: Parent getter.
 ```php
-/**  
- * @return Tag  
+/**
+ * @return Tag
  */
 $tag->getParent();
 ```
 
+
 ## root
-Root wrapper.
+`public`: Root wrapper.
 ```php
-/**  
- * @param \Closure $closure  
- * @return Tag 
+/**
+ * @param \Closure $closure
+ * @return Tag
  */
- $tag->root(\Closure $closure);
+$tag->root(\Closure $closure);
 ```
+
 > Returns himself and not the parent.
 
 ## getRoot
-Get the very first parent.
+`public`: Get the very first parent.
+```php
+/**
+ * @return Tag
+ */
+$tag->getRoot();
+```
+
+## isTsElement
+`public`: If the element of this tag is equal to the specified.
+```php
+/**
+ * @param string $element
+ * @return bool
+ */
+$tag->isTsElement(string $element);
+```
+
+## isClosingTag
+`public`: Check if this tag closes or not.
+```php
+/**
+ * @return bool
+ */
+$tag->isClosingTag();
+```
+
+## isDebug
+`public`: Is debug mode.
+```php
+/**
+ * @return bool
+ */
+$tag->isDebug();
+```
+
+## isRendered
+`public`: Is rendered element.
+```php
+/**
+ * @return bool
+ */
+$tag->isRendered();
+```
+
+## unRender
+`public`: Clear render state.
+```php
+/**
+ * @return $this
+ */
+$tag->unRender();
+```
+
+## unHash
+`public`: Remove hash by name.
+```php
+/**
+ * @param string $hash_name
+ * @return $this
+ */
+$tag->unHash($hash_name = "RENDERED");
+```
+
+## setDebug
+`public`: Debug mode setter.
+```php
+/**
+ * @return Tag
+ */
+$tag->setDebug();
+```
+
+## getChildElementCount
+`public`: Get child element count.
+```php
+/**
+ * @return int
+ */
+$tag->getChildElementCount();
+```
+
+## setChildElementCount
+`public`: Child element count setter.
+```php
+/**
+ * @param int $child_element_count
+ * @return Tag
+ */
+$tag->setChildElementCount(int $child_element_count);
+```
+
+## setParent
+`public`: Parent setter.
+```php
+/**
+ * @param Tag $tag
+ * @return Tag
+ */
+$tag->setParent(\Lar\Tagable\Tag $tag);
+```
+
+
+
+## getRendered
+`public`: Get render data.
+```php
+/**
+ * @return string
+ */
+$tag->getRendered();
+```
+
+## setDatas
+`public`: Set the values of the attribute "data-*".
+```php
+/**
+ * @param array $datas
+ * @return Tag
+ * @throws \Exception
+ */
+$tag->setDatas(array $datas);
+```
+### Example 
+```php
+echo DIV::when("Click")->setDatas([
+	"target" => "modal"
+])->render();
+```
+Result
+```html
+<div data-target="modal">Click</div>
+```
+
+## hasClass
+`public`: Check if the component has such a class.
+```php
+/**
+ * .
+ * @param string $class
+ * @return bool
+ */
+$tag->hasClass(string $class);
+```
+
+## hasAttribute
+`public`: Check whether the component has such an attribute.
+```php
+/**
+ * .
+ * @param string $attribute
+ * @return mixed
+ */
+$tag->hasAttribute(string $attribute);
+```
+
+## getAttribute
+`public`: Get attribute value.
+```php
+/**
+ * @param string $attribute
+ * @return string|array|bool
+ */
+$tag->getAttribute(string $attribute);
+```
+
+## removeAttribute
+`public`: Remove attribute.
+```php
+/**
+ * @param string|array $name
+ * @return $this
+ */
+$tag->removeAttribute($name);
+```
+
+## attr
+`public`: Attribute setter.
+```php
+/**
+ * @param $name
+ * @param null $value
+ * @return $this
+ * @throws \Exception
+ */
+$tag->attr($name, $value = "");
+```
+
+## text
+`public`: Content setter.
+```php
+/**
+ * @param $value
+ * @param array $values
+ * @return mixed
+ * @throws \Exception
+ */
+$tag->text($value, ...$values);
+```
+## addClass
+`public`: Add CSS class in to tag.
+```php
+/**
+ * @param string|array $class
+ * @return $this
+ * @throws \Exception
+ */
+$tag->addClass(...$class);
+```
+
+## addClassIf
+`public`:  Add CSS class in to tag if `$eq == true`
+```php
+/**
+ * @param $eq
+ * @param string|array $class
+ * @return $this
+ * @throws \Exception
+ */
+$tag->addClassIf($eq, ...$class);
+```
+
+## appEnd
+`public`: Content append setter.
+```php
+/**
+ * @param array $data
+ * @return Tag
+ * @throws \Exception
+ */
+$tag->appEnd(...$data);
+```
+
+## appEndIf
+`public`: App end data if `$eq == true`
+```php
+/**
+ * ...
+ * @param $eq
+ * @param mixed ...$data
+ * @return $this
+ * @throws \Exception
+ */
+$tag->appEndIf($eq, ...$data);
+```
+
+## _
+`public`: Parent link.
+```php
+$tag->_();
+```
+
+## prepEnd
+`public`: Content prepend setter.
+```php
+/**
+ * @param array $data
+ * @return Tag
+ * @throws \Exception
+ */
+$tag->prepEnd(...$data);
+```
+
+## prepEndIf
+`public`: Prep end data if.
+```php
+/**
+ * ...
+ * @param $eq
+ * @param mixed ...$data
+ * @return $this
+ * @throws \Exception
+ */
+$tag->prepEndIf($eq, ...$data);
+```
+
+## content
+`public`: Clear content and adds data if that to need.
+```php
+/**
+ * .
+ * @param array|string|\Closure $value
+ * @return $this
+ * @throws \Exception
+ */
+$tag->content(...$value);
+```
+
+## resetAttributes
+`public`: Reset all attributes.
+```php
+/**
+ * @return $this
+ */
+$tag->resetAttributes();
+```
+
+## anchor
+`public`: Set anchor. `href="#anchor_name"`
+```php
+/**
+ * @param string $name
+ * @return $this
+ */
+$tag->anchor(string $name = "");
+```
+
+## clear
+`public`: Clean component.
+```php
+/**
+ * @throws \Exception
+ */
+$tag->clear();
+```
+
+## add
+`public`: Add new child.
+```php
+/**
+ * @param string $element
+ * @param array $arguments
+ * @return $this
+ * @throws \Exception
+ */
+$tag->add(string $element, array $arguments = []);
+```
+## repeat
+`public`: Paste this component into parent N times. Return parent.
+```php
+/**
+ * @param int $time
+ * @return $this
+ */
+$tag->repeat(int $time);
+```
+
+## when
+`public|static`: When element.
+```php
+/**
+ * @param $arguments
+ * @return Helpers
+ * @throws \Exception
+ */
+$tag->when(...$arguments);
+```
+## createUniqueAttribute
+`public`: Create unique attribute from tag.
+```php
+/**
+ * @return Helpers
+ * @throws \Exception
+ */
+$tag->createUniqueAttribute();
+```
+
+## getUnique
+`public`: Get unique identifier.
+```php
+/**
+ * @return string
+ */
+$tag->getUnique();
+```
+## createUnique
+`public`: Create unique inner identifier from tag.
+```php
+/**
+ * @param string $salt
+ * @return $this
+ */
+$tag->createUnique(string $salt = "tag");
+```
+## isChanged
+`public`: Check change status.
+```php
+/**
+ * @return bool
+ */
+$tag->isChanged();
+```
+## getHashes
+`public`: Get tag hashes.
+```php
+/**
+ * @return array
+ */
+$tag->getHashes();
+```
+## compareHashes
+`public`: Compare hashes.
+```php
+/**
+ * @param array|Tag $comparable_hashes
+ * @return array
+ * @throws \Exception
+ */
+$tag->compareHashes($comparable_hashes = []);
+```
+## getRenderContent
+`public`: Rendered content getter.
+```php
+/**
+ * @return string
+ */
+$tag->getRenderContent();
+```
+## whenRender
+`public`: Set when render closure.
+```php
+/**
+ * @param \Closure $closure
+ * @return $this
+ */
+$tag->whenRender(\Closure $closure);
+```
+## nameAppEnd
+`public`: Add name in app end.
+```php
+/**
+ * @param string $name_append
+ * @return $this
+ */
+$tag->nameAppEnd(string $name_append);
+```
+## namePrepEnd
+`public`: Add name prepend.
+```php
+/**
+ * @param string $name_prepend
+ * @return $this
+ */
+$tag->namePrepEnd(string $name_prepend);
+```
+## mapCollect
+`public`: Collection tag map.
+```php
+/**
+ * @param Collection|array $collection
+ * @param \Closure $closure
+ * @return Helpers
+ * @throws \ReflectionException
+ */
+$tag->mapCollect($collection, \Closure $closure);
+```
+## toBottom
+`public`: Type to bottom mode.
+```php
+/**
+ * @param array $data
+ * @return $this
+ */
+$tag->toBottom(...$data);
+```
+## isBottom
+`public`: Check is bottom mode.
+```php
+/**
+ * @return bool
+ */
+$tag->isBottom();
+```
+## dump
+`public`: Dump this tag.
+```php
+/**
+ * @return $this
+ */
+$tag->dump();
+```
+
+## ifAttribute
+`public`: If attribute equal to value.
+```php
+/**
+ * @param $attr
+ * @param $value
+ * @return bool
+ */
+$tag->ifAttribute($attr, $value);
+```
+## toExecute
+`public`: Add method or methods to execute list.
+```php
+/**
+ * @param $data
+ * @return $this
+ */
+$tag->toExecute($data);
+```
+## toGlobalExecute
+`public`: Add method or methods to global execute list.
+```php
+/**
+ * @param $data
+ * @return $this
+ */
+$tag->toGlobalExecute($data);
+```
+## quickInfusion
+`public`: Quick infusion tag width data.
+```php
+/**
+ * @param array $data
+ * @return $this
+ */
+$tag->quickInfusion(array $data);
+```
+## render
+`public`: Get the evaluated contents of the object.
+```php
+/**
+ * @return string
+ * @throws \Exception
+ */
+$tag->render();
+```
+## find
+`public`: Find tags in content.
+```php
+/**
+ * @param string $selector
+ * @return $this|FindCollection
+ * @throws \Exception
+ */
+$tag->find(string $selector);
+```
+
