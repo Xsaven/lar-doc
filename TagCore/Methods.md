@@ -1,5 +1,8 @@
-# Tag Core Methods
+# Tag Core
+It contains everything you need to know about the methods and calls in the tag class. In fact, this class is very powerful and multifunctional, as well as easily expandable. I will try to bring you up to date.
 
+# Methods
+In fact, there are a lot of methods, it lists the standardly available methods that you can naturally override as well as extend to your own taste.
 ## resetCollect
 `public static`: Reset collection.
 ```php
