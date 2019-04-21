@@ -1,16 +1,16 @@
  * [About](/About_LAR.md)
  * [Installation](/Install.md)
- * CryptoCollection
+ * CryptoCollection (crypto)
 	 * [About CryptoCollection](/CryptoCollection/About_CryptoCollection.md)
- * DeveloperMode
+ * DeveloperMode (developer)
 	 * [About DeveloperMode](/DeveloperMode/About_DeveloperMode.md)
- * LarPanel
+ * LarPanel (lpanel)
 	 * [About LarPanel](/LarPanel/About_LarPanel.md)
- * LarServer
+ * LarServer (lserve)
 	 * [About LarServer](/LarServer/About_LarServer.md)
- * LayoutCore
+ * LayoutCore (layout)
 	 * [About LayoutCore](/LayoutCore/About_LayoutCore.md)
- * LJScript
+ * LJScript (ljs)
 	 * JavaScript Framework
 		 * Classes
 			 * [LJS](/LJScript/JavaScript_Framework/Classes/LJS.md)
@@ -20,13 +20,13 @@
 			 * [Declarator](/LJScript/JavaScript_Framework/Macroses/Declarator.md)
 	 * Lar packeage
 	 * [About LJScript](/LJScript/About_LJScript.md)
- * MaterialDesign
+ * MaterialDesign (materialize)
 	 * [About MaterialDesign](/MaterialDesign/About_MaterialDesign.md)
- * RoutWrapper
+ * RoutWrapper (roads)
 	 * [Road Interface](RoutWrapper/Road_interface.md)
 	 * [Helpers](RoutWrapper/Helpers.md)
 	 * [About RoutWrapper](/RoutWrapper/About_RoutWrapper.md)
- * TagCore
+ * TagCore (tagable)
 	 * [Helpers](/TagCore/Helpers.md)
 	 * [Methods](/TagCore/Methods.md)
 	 * [About TagCore](/TagCore/About_TagCore.md)
