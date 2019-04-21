@@ -758,3 +758,97 @@ $tag->render();
 $tag->find(string $selector);
 ```
 
+# Magic methods
+
+## Set attribute
+
+Attribute determination methods:
+```php
+/**
+ * @param ...$mixed
+ * @return Tag
+ */
+$tag->setHref("http://google.com");
+```
+
+`setAccept`, `setAcceptCharset`, `setAccesskey`, `setAction`, `setAlign`, `setAlt`, `setAsync`, `setAutocomplete`, `setAutofocus`, `setAutoplay`, `setBgcolor`, `setBorder`, `setCharset`, `setChecked`, `setCite`, `setClass`, `setColor`, `setCols`, `setColspan`, `setContent`, `setContenteditable`, `setControls`, `setCoords`, `setData`, `setDatetime`, `setDefault`, `setDefer`, `setDir`, `setDirname`, `setDisabled`, `setDownload`, `setDraggable`, `setDropzone`, `setEnctype`, `setFor`, `setForm`, `setFormaction`, `setHeaders`, `setHeight`, `setHidden`, `setHigh`, `setHref`, `setHreflang`, `setHttpEquiv`, `setId`, `setIsmap`, `setKind`, `setLabel`, `setLang`, `setList`, `setLoop`, `setLow`, `setMax`, `setMaxlength`, `setMedia`, `setMethod`, `setMin`, `setMultiple`, `setMuted`, `setName`, `setNovalidate`, `setOpen`, `setOptimum`, `setPattern`, `setPlaceholder`, `setPoster`, `setPreload`, `setReadonly`, `setRel`, `setRequired`, `setReversed`, `setRole`, `setRows`, `setRowspan`, `setSandbox`, `setScope`, `setSelected`, `setShape`, `setSize`, `setSizes`, `setSpan`, `setSpellcheck`, `setSrc`, `setSrcdoc`, `setSrclang`, `setSrcset`, `setStart`, `setStep`, `setStyle`, `setTabindex`, `setTarget`, `setTitle`, `setTranslate`, `setType`, `setUsemap`, `setValue`, `setWidth`, `setWrap`
+
+> Yes, all attributes that are in HTML5 have their own magic method.
+
+## Set attribute If
+```php
+/**
+ * @param boolean $eq|\Closure
+ * @param ...$mixed
+ * @return Tag
+ */
+$tag->setHrefIf(\Auth::user()->id == $id, "http://google.com");
+```
+
+`setAcceptIf`, `setAcceptCharsetIf`, `setAccesskeyIf`, `setActionIf`, `setAlignIf`, `setAltIf`, `setAsyncIf`, `setAutocompleteIf`, `setAutofocusIf`, `setAutoplayIf`, `setBgcolorIf`, `setBorderIf`, `setCharsetIf`, `setCheckedIf`, `setCiteIf`, `setClassIf`, `setColorIf`, `setColsIf`, `setColspanIf`, `setContentIf`, `setContenteditableIf`, `setControlsIf`, `setCoordsIf`, `setDataIf`, `setDatetimeIf`, `setDefaultIf`, `setDeferIf`, `setDirIf`, `setDirnameIf`, `setDisabledIf`, `setDownloadIf`, `setDraggableIf`, `setDropzoneIf`, `setEnctypeIf`, `setForIf`, `setFormIf`, `setFormactionIf`, `setHeadersIf`, `setHeightIf`, `setHiddenIf`, `setHighIf`, `setHrefIf`, `setHreflangIf`, `setHttpEquivIf`, `setIdIf`, `setIsmapIf`, `setKindIf`, `setLabelIf`, `setLangIf`, `setListIf`, `setLoopIf`, `setLowIf`, `setMaxIf`, `setMaxlengthIf`, `setMediaIf`, `setMethodIf`, `setMinIf`, `setMultipleIf`, `setMutedIf`, `setNameIf`, `setNovalidateIf`, `setOpenIf`, `setOptimumIf`, `setPatternIf`, `setPlaceholderIf`, `setPosterIf`, `setPreloadIf`, `setReadonlyIf`, `setRelIf`, `setRequiredIf`, `setReversedIf`, `setRoleIf`, `setRowsIf`, `setRowspanIf`, `setSandboxIf`, `setScopeIf`, `setSelectedIf`, `setShapeIf`, `setSizeIf`, `setSizesIf`, `setSpanIf`, `setSpellcheckIf`, `setSrcIf`, `setSrcdocIf`, `setSrclangIf`, `setSrcsetIf`, `setStartIf`, `setStepIf`, `setStyleIf`, `setTabindexIf`, `setTargetIf`, `setTitleIf`, `setTranslateIf`, `setTypeIf`, `setUsemapIf`, `setValueIf`, `setWidthIf`, `setWrapIf`
+
+## Get attribute
+
+```php
+/**
+ * @return string|array|boolean
+ */
+$tag->getSrc();
+```
+
+`getAccept`, `getAcceptCharset`, `getAccesskey`, `getAction`, `getAlign`, `getAlt`, `getAsync`, `getAutocomplete`, `getAutofocus`, `getAutoplay`, `getBgcolor`, `getBorder`, `getCharset`, `getChecked`, `getCite`, `getClass`, `getColor`, `getCols`, `getColspan`, `getContent`, `getContenteditable`, `getControls`, `getCoords`, `getData`, `getDatetime`, `getDefault`, `getDefer`, `getDir`, `getDirname`, `getDisabled`, `getDownload`, `getDraggable`, `getDropzone`, `getEnctype`, `getFor`, `getForm`, `getFormaction`, `getHeaders`, `getHeight`, `getHidden`, `getHigh`, `getHref`, `getHreflang`, `getHttpEquiv`, `getId`, `getIsmap`, `getKind`, `getLabel`, `getLang`, `getList`, `getLoop`, `getLow`, `getMax`, `getMaxlength`, `getMedia`, `getMethod`, `getMin`, `getMultiple`, `getMuted`, `getName`, `getNovalidate`, `getOpen`, `getOptimum`, `getPattern`, `getPlaceholder`, `getPoster`, `getPreload`, `getReadonly`, `getRel`, `getRequired`, `getReversed`, `getRole`, `getRows`, `getRowspan`, `getSandbox`, `getScope`, `getSelected`, `getShape`, `getSize`, `getSizes`, `getSpan`, `getSpellcheck`, `getSrc`, `getSrcdoc`, `getSrclang`, `getSrcset`, `getStart`, `getStep`, `getStyle`, `getTabindex`, `getTarget`, `getTitle`, `getTranslate`, `getType`, `getUsemap`, `getValue`, `getWidth`, `getWrap`
+
+## Set HTML Event
+
+```php
+/**
+ * @param ...$mixed
+ * @return Tag
+ */
+$tag->onClick("alert('Hello!')");
+```
+`onAbort`, `onAfterprint`, `onAnimationend`, `onAnimationiteration`, `onAnimationstart`, `onBeforeprint`, `onBeforeunload`, `onBlur`, `onCanplay`, `onCanplaythrough`, `onChange`, `onClick`, `onContextmenu`, `onCopy`, `onCut`, `onDblclick`, `onDrag`, `onDragend`, `onDragenter`, `onDragleave`, `onDragover`, `onDragstart`, `onDrop`, `onDurationchange`, `onEnded`, `onError`, `onFocus`, `onFocusin`, `onFocusout`, `onFullscreenchange`, `onFullscreenerror`, `onHashchange`, `onInput`, `onInvalid`, `onKeydown`, `onKeypress`, `onKeyup`, `onLoad`, `onLoadeddata`, `onLoadedmetadata`, `onLoadstart`, `onMessage`, `onMousedown`, `onMouseenter`, `onMouseleave`, `onMousemove`, `onMouseover`, `onMouseout`, `onMouseup`, `onMousewheel`, `onOffline`, `onOnline`, `onOpen`, `onPagehide`, `onPageshow`, `onPaste`, `onPause`, `onPlay`, `onPlaying`, `onPopstate`, `onProgress`, `onRatechange`, `onResize`, `onReset`, `onScroll`, `onSearch`, `onSeeked`, `onSeeking`, `onSelect`, `onShow`, `onStalled`, `onStorage`, `onSubmit`, `onSuspend`, `onTimeupdate`, `onToggle`, `onTouchcancel`, `onTouchend`, `onTouchmove`, `onTouchstart`, `onTransitionend`, `onUnload`, `onVolumechange`, `onWaiting`, `onWheel`
+
+> Oh yeah, I also have a magical function for every existing event in HTML5 (This is not the end of surprises).
+
+## Set HTML Event If
+
+```php
+/**
+ * @param boolean $eq|\Closure
+ * @param ...$mixed
+ * @return Tag
+ */
+$tag->onClickIf(\Auth::user()->id != $moderator_id, "alert('Don't touch');");
+```
+
+`onAbortIf`, `onAfterprintIf`, `onAnimationendIf`, `onAnimationiterationIf`, `onAnimationstartIf`, `onBeforeprintIf`, `onBeforeunloadIf`, `onBlurIf`, `onCanplayIf`, `onCanplaythroughIf`, `onChangeIf`, `onClickIf`, `onContextmenuIf`, `onCopyIf`, `onCutIf`, `onDblclickIf`, `onDragIf`, `onDragendIf`, `onDragenterIf`, `onDragleaveIf`, `onDragoverIf`, `onDragstartIf`, `onDropIf`, `onDurationchangeIf`, `onEndedIf`, `onErrorIf`, `onFocusIf`, `onFocusinIf`, `onFocusoutIf`, `onFullscreenchangeIf`, `onFullscreenerrorIf`, `onHashchangeIf`, `onInputIf`, `onInvalidIf`, `onKeydownIf`, `onKeypressIf`, `onKeyupIf`, `onLoadIf`, `onLoadeddataIf`, `onLoadedmetadataIf`, `onLoadstartIf`, `onMessageIf`, `onMousedownIf`, `onMouseenterIf`, `onMouseleaveIf`, `onMousemoveIf`, `onMouseoverIf`, `onMouseoutIf`, `onMouseupIf`, `onMousewheelIf`, `onOfflineIf`, `onOnlineIf`, `onOpenIf`, `onPagehideIf`, `onPageshowIf`, `onPasteIf`, `onPauseIf`, `onPlayIf`, `onPlayingIf`, `onPopstateIf`, `onProgressIf`, `onRatechangeIf`, `onResizeIf`, `onResetIf`, `onScrollIf`, `onSearchIf`, `onSeekedIf`, `onSeekingIf`, `onSelectIf`, `onShowIf`, `onStalledIf`, `onStorageIf`, `onSubmitIf`, `onSuspendIf`, `onTimeupdateIf`, `onToggleIf`, `onTouchcancelIf`, `onTouchendIf`, `onTouchmoveIf`, `onTouchstartIf`, `onTransitionendIf`, `onUnloadIf`, `onVolumechangeIf`, `onWaitingIf`, `onWheelIf`
+
+## Quickly Class
+And you can also quickly and easily insert your favorite classes with a short note:
+```php 
+/**  
+ * @param $delimetr = "-"  
+ * @return Tag  
+ * @throws \Exception  
+ */
+ $tag->classMainPage(); // [class="main-page"]
+ $tag->classMainPage("_"); // [class="main_page"]
+ $tag->classMainPage("camel"); // [class="mainPage"]
+ $tag->classMainPage("Camel"); // [class="MainPage"]
+```
+
+## Quickly Class If
+The rules are the same as that of just a quick class.
+```php 
+/** 
+ * @param $eq|\Closure 
+ * @param $delimetr = "-"  
+ * @return Tag  
+ * @throws \Exception  
+ */
+ $route_name = \Route::currentRouteName();
+ $tag->classActiveLinkIf($route_name === "home"); // [class="active-link"]
+ $tag->classActiveLinkIf($route_name === "home", "_"); // [class="active_link"]
+ ...
+```
