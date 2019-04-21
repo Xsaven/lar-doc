@@ -81,3 +81,26 @@ Checks if an item has an element.
  */
  $tag->isElement();
 ```
+
+## getParent
+Get element parent.
+```php
+/**  
+ * @return Tag  
+ */
+$tag->getParent();
+```
+
+## root
+Root wrapper.
+```php
+/**  
+ * @param \Closure $closure  
+ * @return Tag 
+ */
+ $tag->root(\Closure $closure);
+```
+> Returns himself and not the parent.
+
+## getRoot
+Get the very first parent.
