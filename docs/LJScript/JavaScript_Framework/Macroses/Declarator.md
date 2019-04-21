@@ -1,9 +1,9 @@
 # Declarator Macroses
 
 ## declare
+Declare application data
 ```javascript
 /**  
- * Declare application data
  * @param (string) group  
  * @param name  
  * @param data  
