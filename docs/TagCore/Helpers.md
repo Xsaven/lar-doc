@@ -1,4 +1,4 @@
-# Package Helpers Package
+# Package Helpers
 
 ## is_tag
 Check whether the text is a true HTML tag.
