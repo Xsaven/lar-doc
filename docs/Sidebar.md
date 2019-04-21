@@ -23,6 +23,7 @@
  * MaterialDesign
 	 * [About MaterialDesign](/MaterialDesign/About_MaterialDesign.md)
  * RoutWrapper
+	 * [Helpers](RoutWrapper/Helpers.md)
 	 * [About RoutWrapper](/RoutWrapper/About_RoutWrapper.md)
  * TagCore
 	 * [Helpers](/TagCore/Helpers.md)
