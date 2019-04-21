@@ -1,5 +1,7 @@
  * [About](/About_LAR.md)
  * [Installation](/Install.md)
+ * Console
+	 * [Command List](Console/Command_List.md)
  * CryptoCollection (crypto)
 	 * [About CryptoCollection](/CryptoCollection/About_CryptoCollection.md)
  * DeveloperMode (developer)
