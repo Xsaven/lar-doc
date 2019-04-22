@@ -42,14 +42,14 @@ Output:
 ```html
 <html>
 	<head>...</head>
-	<body>
+	<body class="main">
 		<div class="wrapper">
 			<p>Hello World!</p>
 		</div>
 	</body>
 </html>
 ```
-> The symbol "_" in front of the method means that it is necessary to contact the parent with this method, if he is present, if he is not, then he will call his caller.
+> The symbol `_` in front of the method means that it is necessary to contact the parent with this method, if he is present, if he is not, then he will call his caller.
 
 ## Create a component
 `app/Shape/Users.php`:
