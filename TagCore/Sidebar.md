@@ -1,4 +1,6 @@
 * [TagCore (tagable)](/TagCore/)
+	 * [Attribute Collection](TagCore/Attribute_Collection.md)
+	 * [Content Collection](TagCore/Content_Collection.md)
 	 * [Find Collection](/TagCore/Find_Collection.md)
 	 * [HTML5 Library](/TagCore/HTML5_Library.md)
 	 * [Aliases](/TagCore/Aliases.md)
