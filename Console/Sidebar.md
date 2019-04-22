@@ -1,3 +1,3 @@
 * [Console](/Console/)
-	 * [Command List](Command_List.md)
+	 * [Command List](/Console/Command_List.md)
 * [Main menu](/)
