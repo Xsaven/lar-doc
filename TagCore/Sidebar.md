@@ -1,5 +1,6 @@
 * [TagCore (tagable)](/TagCore/)
 	 * [Helpers](/TagCore/Helpers.md)
+	 * [HTML5 Library](TagCore/HTML5_Library.md)
 	 * [Methods](/TagCore/Methods.md)
 	 * [About TagCore](/TagCore/About_TagCore.md)
 * [Main menu](/)
