@@ -30,4 +30,4 @@ $tag->cover($data);
  */
 $tag->render();
 ```
-And all the other methods that are present in [Laravel Collection]([https://laravel.com/docs/5.8/collections](https://laravel.com/docs/5.8/collections))
+And all the other methods that are present in [Laravel Collection](https://laravel.com/docs/5.8/collections)
