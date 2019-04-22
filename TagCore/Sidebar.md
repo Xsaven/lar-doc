@@ -1,5 +1,5 @@
 * [TagCore (tagable)](/TagCore/)
-	 * [Find_Collection](/TagCore/Find_Collection.md)
+	 * [Find Collection](/TagCore/Find_Collection.md)
 	 * [HTML5 Library](/TagCore/HTML5_Library.md)
 	 * [Aliases](/TagCore/Aliases.md)
 	 * [Methods](/TagCore/Methods.md)
