@@ -1,24 +1,24 @@
 # Aliases class
 
 Aliases tag.
-
+ 
 ### List of standard aliases:
 | Prototype | Value | View |
 |--|--|--|
 | :js | javascript:void(0); | |
-| :space, :nbsp | \&nbsp; | &nbsp; |
-| :copy | \&copy; | &copy; |
-| :reg | \&reg; | &reg; |  
-| :euro | \&euro; | &euro; |
-| :trade | \&trade; | &trade; |
-| :larr | \&larr; | &larr; |
-| :uarr | \&uarr; | &uarr; |
-| :rarr | \&rarr; | &rarr; |
-| :darr | \&darr; | &darr; |
-| :spades | \&spades; | &spades; |
-| :clubs | \&clubs; | &clubs; |
-| :hearts | \&hearts; | &hearts; |
-| :diams | \&diams; | &diams; |
+| :space, :nbsp | &amp;nbsp; | &nbsp; |
+| :copy | &amp;copy; | &copy; |
+| :reg | &amp;reg; | &reg; |  
+| :euro | &amp;euro; | &euro; |
+| :trade | &amp;trade; | &trade; |
+| :larr | &amp;larr; | &larr; |
+| :uarr | &amp;uarr; | &uarr; |
+| :rarr | &amp;rarr; | &rarr; |
+| :darr | &amp;darr; | &darr; |
+| :spades | &amp;spades; | &spades; |
+| :clubs | &amp;clubs; | &clubs; |
+| :hearts | &amp;hearts; | &hearts; |
+| :diams | &amp;diams; | &diams; |
 
 ## init
 `public static`: Initialization library.
