@@ -2,4 +2,4 @@
 	 * [Helpers](/TagCore/Helpers.md)
 	 * [Methods](/TagCore/Methods.md)
 	 * [About TagCore](/TagCore/About_TagCore.md)
- * [Home](/)
+* [Home](/)
