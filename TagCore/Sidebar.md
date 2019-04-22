@@ -4,5 +4,5 @@
 	 * [Aliases](/TagCore/Aliases.md)
 	 * [Methods](/TagCore/Methods.md)
 	 * [Helpers](/TagCore/Helpers.md)
-	 * [About TagCore](/TagCore/About_TagCore.md)
+	 * [About TagCore](/TagCore/README.md)
 * [Main menu](/)
