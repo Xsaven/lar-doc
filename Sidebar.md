@@ -1,7 +1,6 @@
  * [About](/About_LAR.md)
  * [Installation](/Install.md)
- * Console
-	 * [Command List](Console/Command_List.md)
+ * [Console](/Console/)
  * [CryptoCollection (crypto)](/CryptoCollection/)
  * [DeveloperMode (developer)](/DeveloperMode/)
  * [LarPanel (lpanel)](/LarPanel/)
