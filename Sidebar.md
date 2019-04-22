@@ -1,4 +1,4 @@
- * [About](/About.md)
+ * [About](/README.md)
  * [Installation](/Install.md)
  * [Console](/Console/)
  * [CryptoCollection (crypto)](/CryptoCollection/)
