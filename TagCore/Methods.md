@@ -755,10 +755,19 @@ $tag->render();
 ```php
 /**
  * @param string $selector
- * @return $this|FindCollection
+ * @return Tag|FindCollection
  * @throws \Exception
  */
 $tag->find(string $selector);
+```
+# Element methods
+Each tag element has a corresponding method name for adding a new component to the parent.
+```php
+/**
+ * @param ...$mixed
+ * @return Tag
+ */
+ $tag->div([".myClass"])->a(["href" => "#link"], "Text");
 ```
 
 # Magic methods
