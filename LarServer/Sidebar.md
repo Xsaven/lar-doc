@@ -1,3 +1,3 @@
- * [LarServer (lserve)](/LarServer/)
+* [LarServer (lserve)](/LarServer/)
 	 * [About LarServer](/LarServer/README.md)
 * [Main menu](/)
