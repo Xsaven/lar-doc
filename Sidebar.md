@@ -1,4 +1,4 @@
- * [About](/About_LAR.md)
+ * [About](/About.md)
  * [Installation](/Install.md)
  * [Console](/Console/)
  * [CryptoCollection (crypto)](/CryptoCollection/)
