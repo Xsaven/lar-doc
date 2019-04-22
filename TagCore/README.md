@@ -34,6 +34,23 @@ Output:
 <body><div class="container"><a href="/">Go to Home</a></div></body>
 ```
 
+## Create more complex nesting
+```php
+echo tag("html")->head("...")->_body(['main'])->div(['wrapper'])->p("Hello World!")->render();
+```
+Output:
+```html
+<html>
+	<head>...</head>
+	<body>
+		<div class="wrapper">
+			<p>Hello World!</p>
+		</div>
+	</body>
+</html>
+```
+> The symbol "_" in front of the method means that it is necessary to contact the parent with this method, if he is present, if he is not, then he will call his caller.
+
 ## Create a component
 `app/Shape/Users.php`:
 ```php
