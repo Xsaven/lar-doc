@@ -10,7 +10,7 @@ $tag->resetCollect();
 ```
 
 ## selector
-`public static`: Almost `CSS` selector, works for the helper `_s`
+`public static`: Almost `CSS` selector, works for the helper [_s](/TagCore/Helpers?id=_s)
 ```php
 /**
  * @param string $selector
