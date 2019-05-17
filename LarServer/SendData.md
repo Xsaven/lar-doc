@@ -69,7 +69,7 @@ public $ids = ["id", "email"];
 А затем классу `\\App\\Providers\\AppServiceProvider` в методе `boot` дописать следующую настройку:
 ```php
 use Lar\LServe\Passport;
-
+...
 Passport::addGuardIdentification(); // Добавит стандартного guard'a "web"
 Passport::addGuardIdentification("custome_guard"); // Также можно свего guard'a зарегестрировать.
 ```
