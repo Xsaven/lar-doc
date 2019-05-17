@@ -91,7 +91,7 @@ false - Пользователи которые не прошли верифик
 
 `*` - Это любое имя поля модели
 
-> Если это кастомный `guard` то начинатся будут его параметры точно так же как и его имя только Upper Case, по анологии с `web` `guard`
+> Если это кастомный `guard` то начинаться будут его параметры точно так же как и его имя только в Upper Case, по анологии с `web` `guard`
 
 ```php
 class User extends Model {
@@ -103,4 +103,6 @@ inAllDisplay(["ljs._info" => "Hello"], ["WEB_ID" => 1]);
 inAllDisplay(["ljs._info" => "Hello"], ["WEB_EMAIL" => "root@gmail.com"]);
 // OR
 inAllDisplay(["ljs._info" => "Hello"], ["WEB_ID" => 1, "WEB_EMAIL" => "root@gmail.com"]);
+// OR Custome
+inAllDisplay(["ljs._info" => "Hello"], ["CUSTOME_GUARD_ID" => 1]);
 ```
