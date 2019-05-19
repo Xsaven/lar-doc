@@ -104,7 +104,7 @@ $tag->create();
 # Methods public
 
 ## setLink
-Set a reference to this object of a particular variable also by reference.
+`public`: Set a reference to this object of a particular variable also by reference.
 ```php
 /**  
  * @param $link  
@@ -114,7 +114,7 @@ Set a reference to this object of a particular variable also by reference.
 ```
 
 ## view 
-Insert blade view in tag.
+`public`: Insert blade view in tag.
 ```php
 /**
  * @param $path
@@ -605,8 +605,9 @@ $tag->repeat(int $time);
 $tag->when(...$arguments);
 ```
 
+
 ## whenIf
-Make when if `$eq == true`
+`public|static`: Make when if `$eq == true`
 ```php
 /**  
  * @param $eq  
@@ -615,7 +616,7 @@ Make when if `$eq == true`
  */
  public function whenIf($eq, ...$data)
 ```
-> 
+
 
 ## createUniqueAttribute
 `public`: Create unique attribute from tag.
@@ -903,5 +904,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTA5MzA5NDQsODQ0MjY3NjJdfQ==
+eyJoaXN0b3J5IjpbLTExNTA0MTYzNjUsODQ0MjY3NjJdfQ==
 -->
