@@ -103,7 +103,7 @@ $tag->create();
 
 # Methods public
 
-## setLink
+## haveLink
 `public`: Set a reference to this object of a particular variable also by reference.
 ```php
 /**  
@@ -904,5 +904,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTA0MTYzNjVdfQ==
+eyJoaXN0b3J5IjpbLTkyNzg2NzA5MSwtMTE1MDQxNjM2NV19
 -->
