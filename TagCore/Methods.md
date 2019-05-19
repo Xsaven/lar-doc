@@ -104,7 +104,16 @@ $tag->create();
 # Methods public
 
 ## view 
-Insert blade view
+Insert blade view in tag.
+```php
+/**
+ * @param $path
+ * @param array $data
+ * @return $this
+ * @throws \Exception
+ */
+public function view($path, $data = [])
+```
 
 ## hide
 `public`: Add to tag `style="display: none;"`.
@@ -871,5 +880,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTE2OTkyMzldfQ==
+eyJoaXN0b3J5IjpbLTIxMDIyNjE0NzVdfQ==
 -->
