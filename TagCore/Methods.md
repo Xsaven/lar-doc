@@ -864,3 +864,6 @@ The rules are the same as that of just a quick class.
  $tag->classActiveLinkIf($route_name === "home", "_"); // [class="active_link"]
  ...
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjAzODU4OTMwXX0=
+-->
