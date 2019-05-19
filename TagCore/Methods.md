@@ -1,8 +1,9 @@
 # Tag Core
 It contains everything you need to know about the methods and calls in the tag class. In fact, this class is very powerful and multifunctional, as well as easily expandable. I will try to bring you up to date.
 
-# Methods
+# Methods static
 In fact, there are a lot of methods, it lists the standardly available methods that you can naturally override as well as extend to your own taste.
+
 ## resetCollect
 `public static`: Reset collection.
 ```php
@@ -99,6 +100,11 @@ $tag->getComponent(string $name);
  */
 $tag->create();
 ```
+
+# Methods public
+
+## view 
+Insert blade view
 
 ## hide
 `public`: Add to tag `style="display: none;"`.
@@ -865,5 +871,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAzODU4OTMwXX0=
+eyJoaXN0b3J5IjpbLTE0MTE2OTkyMzldfQ==
 -->
