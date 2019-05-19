@@ -103,6 +103,16 @@ $tag->create();
 
 # Methods public
 
+## setLink
+Set a reference to this object of a particular variable also by reference.
+```php
+/**  
+ * @param $link  
+ * @return $this  
+ */
+ public function setLink(&$link)
+```
+
 ## view 
 Insert blade view in tag.
 ```php
@@ -880,5 +890,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDIyNjE0NzVdfQ==
+eyJoaXN0b3J5IjpbODQ0MjY3NjIsLTIxMDIyNjE0NzVdfQ==
 -->
