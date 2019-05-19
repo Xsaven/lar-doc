@@ -604,6 +604,19 @@ $tag->repeat(int $time);
  */
 $tag->when(...$arguments);
 ```
+
+## whenIf
+Make when if `$eq == true`
+```php
+/**  
+ * @param $eq  
+ * @param mixed ...$data  
+ * @return $this  
+ */
+ public function whenIf($eq, ...$data)
+```
+> 
+
 ## createUniqueAttribute
 `public`: Create unique attribute from tag.
 ```php
@@ -890,5 +903,5 @@ The rules are the same as that of just a quick class.
  ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0MjY3NjJdfQ==
+eyJoaXN0b3J5IjpbLTIwMTA5MzA5NDQsODQ0MjY3NjJdfQ==
 -->
