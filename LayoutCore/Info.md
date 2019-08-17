@@ -14,16 +14,37 @@ use Lar\Layout\Commands\Dump\GenerateHelper;
  */
 public function boot()  
 {
-
+	...
 	GenerateHelper::onGenerateDoc(function (ObjectDocument $doc) {  
 		  $doc->addTrait(\UIKit::class);  
 	});
-
+	...
 }
 ...
 ```
 
-### Расширение классу
+### Расширение класса респонда `Respond` док генератором
+
+Добавить в `ServiceProvider` следующий код:
+```php
+...
+use Lar\Layout\Commands\GeneratorCore\EntitiesClass\ObjectDocument;
+use Lar\Layout\Commands\Dump\GenerateHelper;
+...
+/**  
+ * Bootstrap services. * * @return void  
+ * @throws \Exception  
+ */
+public function boot()  
+{
+	...
+	GenerateRespondHelper::onGenerateDoc(function (ObjectDocument $doc) {  
+		  $doc->addTrait(\UIKit::class);  
+	});
+	...
+}
+...
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDE5NTg2Nl19
+eyJoaXN0b3J5IjpbMTk0MzkxNjI2OF19
 -->
