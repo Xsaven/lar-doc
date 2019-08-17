@@ -1,6 +1,6 @@
 ## Дополнительные возможности
 
-Расширение класса компонента.
+Расширение класса компонента док генератором.
 
 Добавить в `ServiceProvider` следующий код:
 ```php
@@ -23,5 +23,5 @@ public function boot()
 ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM4MTc2NzQ5XX0=
+eyJoaXN0b3J5IjpbLTEzMDIzMzA1NzFdfQ==
 -->
