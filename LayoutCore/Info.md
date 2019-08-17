@@ -2,16 +2,17 @@
 
 Расширение класса компонента.
 
-Добавить в `ServiceProvider` следу
+Добавить в `ServiceProvider` следующий код:
 ```php
+...
 use Lar\Layout\Commands\GeneratorCore\EntitiesClass\ObjectDocument;
 use Lar\Layout\Commands\Dump\GenerateHelper;
-
 ...
 /**  
  * Bootstrap services. * * @return void  
  * @throws \Exception  
- */public function boot()  
+ */
+public function boot()  
 {
 
 	GenerateHelper::onGenerateDoc(function (ObjectDocument $doc) {  
@@ -19,7 +20,8 @@ use Lar\Layout\Commands\Dump\GenerateHelper;
 	});
 
 }
+...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2ODg1NTE0OV19
+eyJoaXN0b3J5IjpbNTM4MTc2NzQ5XX0=
 -->
