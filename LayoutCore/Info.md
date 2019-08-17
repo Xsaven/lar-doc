@@ -49,6 +49,3 @@ public function boot()
 }
 ...
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTUxMjE5MV19
--->
