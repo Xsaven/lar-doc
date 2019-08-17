@@ -9,7 +9,9 @@ use Lar\Layout\Commands\GeneratorCore\EntitiesClass\ObjectDocument;
 use Lar\Layout\Commands\Dump\GenerateHelper;
 ...
 /**  
- * Bootstrap services. * * @return void  
+ * Bootstrap services. 
+ *
+ * @return void  
  * @throws \Exception  
  */
 public function boot()  
@@ -32,7 +34,9 @@ use Lar\Layout\Commands\GeneratorCore\EntitiesClass\ObjectDocument;
 use Lar\Layout\Commands\Dump\GenerateRespondHelper;
 ...
 /**  
- * Bootstrap services. * * @return void  
+ * Bootstrap services. 
+ * 
+ * @return void  
  * @throws \Exception  
  */
 public function boot()  
@@ -46,5 +50,5 @@ public function boot()
 ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODk1NjU1MTddfQ==
+eyJoaXN0b3J5IjpbMTU4MTUxMjE5MV19
 -->
