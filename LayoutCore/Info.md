@@ -29,7 +29,7 @@ public function boot()
 ```php
 ...
 use Lar\Layout\Commands\GeneratorCore\EntitiesClass\ObjectDocument;
-use Lar\Layout\Commands\Dump\GenerateHelper;
+use Lar\Layout\Commands\Dump\GenerateRespondHelper;
 ...
 /**  
  * Bootstrap services. * * @return void  
@@ -46,5 +46,5 @@ public function boot()
 ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MzkxNjI2OF19
+eyJoaXN0b3J5IjpbLTE4ODk1NjU1MTddfQ==
 -->
