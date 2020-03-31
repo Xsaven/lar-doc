@@ -1,3 +1,3 @@
  * [About](/README.md)
  * [Installation](/Install.md)
- * [LJS](/ljs/javascript.md)
+ * [Ljs](/ljs/javascript.md)
