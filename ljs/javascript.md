@@ -12,23 +12,58 @@
 <h3 id="exec">exec</h3>
 <pre><code>/**
  * @param data [string|Array|Object]
- * @param params
- * @param storage_data
+ * @param params [any]
+ * @param storage_data [object]
  * @returns {null}
  */
 exec (data, params = null, storage_data = {})
 </code></pre>
-<p>Метод для вызова исполнителя.</p>
+<p>Метод для вызова исполнителя.<br>
+Параметр <code>data</code> может быть строкой для выполнения одного исполнителя или логической последовательности (<a href="/">см. Логическая последовательность строки исполнителя</a>). Так же это может быть массив с перечнем исполнителей или объект так-же с перечнем исполнителей и их параметрами, где ключ это имя исполнителя а содержимое это параметры передаваемые в него.<br>
+В следующий параметр <code>params</code> мы передаём данные которые необходимо отправить в исполнитель (только если это строковая логическая последовательность).<br>
+И последний <code>storage-data</code> - это хранилище данных исполнителя которое доступно внутри класса исполнителя по ссылке <code>this.storage</code>, эти данные доступны для всех указаных исполнителей в параметре <code>data</code>. Так-же в хранилище хранятся некоторые системные данные (<a href="/">см. Системные данные хранилища</a>)</p>
 <h3 id="parse">parse</h3>
 <pre><code>/**
- * @param str
- * @param storage
+ * @param str [string]
+ * @param storage [object]
  * @returns {*}
  */
 parse (str, storage = {})
 </code></pre>
 <p>Метод для парсинга любой строки со вставками исполнителей и заменяет их на результат выполнения самого исполнителя. Синтаксис для вхождения исполнителя <code>&gt;&gt;</code>. Предположим что у вас есть исполнитель который возвращает строку с именем пользователя и у вас есть строка с обычным текстом между которого необходимо вставить это имя. Для этого достаточно сделать следующее:</p>
 <pre><code>ljs.parse(“Hello dear &gt;&gt;user::name, on you email &gt;&gt;user::email send a message with registration code");
+</code></pre>
+<p>Так же возможно передать параметры в исполнители, для этого необходимо передать параметры в круглых скобках разделяя параметры двойным пайпом, например:</p>
+<pre><code>ljs.parse(“Hello dear &gt;&gt;users::find(state.user_id || name), you have a &gt;&gt;user::messages(new) new messages”);
+</code></pre>
+<h3 id="call">call</h3>
+<pre><code>/**
+ * @param command [string]
+ * @param storage [object]
+ * @returns {undefined|*}
+ */
+ call (command, storage = {})
+</code></pre>
+<p>Метод для единичного вызова исполнителя в виде строки как в методе <code>parse</code> только без символа вхождения, например:</p>
+<pre><code>ljs.call(“users::find(state.user_id)”);
+// или
+ljs.call(“user::name”);
+</code></pre>
+<p>Этот метод используется только внутри метода <code>parse</code> и в дальнейшем о нем речи не пойдёт.</p>
+<h3 id="toexec">toExec</h3>
+<pre><code>/**
+ * @param name [string]
+ * @param closure [function]
+ * @returns {this}
+ */
+ toExec (name, closure)
+</code></pre>
+<p>Метод для добавления простого исполнителя в виде функции. Например:</p>
+<pre><code>ljs.toExec(“user_name”, (...params) =&gt; {
+    return “Xsaven”;
+});
+
+ljs.exec(“user_name”);
 </code></pre>
 <h1 id="executors">Executors</h1>
 <p>Исполнители - это специальные классы, которые регистрируются внутри ljs и их возможно вызвать постой строкой <code>string</code> или обьектом, например <code>”info”.exec()</code>.<br>
